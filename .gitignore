@@ -1,3 +1,29 @@
+# In Development
+02-*/
+03-*/
+04-*/
+05-*/
+06-*/
+
+
+# Teacher Stuff
+*/Teacher Code/*
+*_teacher.*
+*/Teacher/*
+*.docx
+*.pptx
+PowerPoint/
+
+# Ignore Annoying icon(s) that causes issues
+Icon
+*/Icon
+
+# Docker Stuff
+composer.phar
+/vendor/
+*/Exercise-LAMP/data/
+*/Exercise-LAMP/ssl/
+
 # Logs
 logs
 *.log
