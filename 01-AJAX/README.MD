@@ -1,24 +1,24 @@
 # Exercise 01
 - [Exercise 01](#exercise-01)
-  - [Objectives](#objectives)
+  - [Checklist](#checklist)
   - [Instructions](#instructions)
-- [Get Docker-Compose is running – Step 1](#get-docker-compose-is-running-%e2%80%93-step-1)
-- [Chrome Network Tools – Step 2](#chrome-network-tools-%e2%80%93-step-2)
-- [Step 3](#step-3)
-- [Step 4](#step-4)
-- [Step 5](#step-5)
-- [Step 6](#step-6)
-- [Step 7](#step-7)
+- [Get Docker-Compose is running](#get-docker-compose-is-running)
+- [Chrome Network Tools](#chrome-network-tools)
+- [Examining PHP Proxy and Getting API Key](#examining-php-proxy-and-getting-api-key)
+- [Step 1 - Instantiating an XMLHttpRequest Object](#step-1---instantiating-an-xmlhttprequest-object)
+- [Step 2 - Opening and Sending a Request](#step-2---opening-and-sending-a-request)
+- [Step 3 - Processing Response Data](#step-3---processing-response-data)
+- [Step 4 - Adding Response Data to the Page](#step-4---adding-response-data-to-the-page)
 
-## Objectives
+## Checklist
 - [ ] Read the Instructions
 - [ ] Step 1 - Docker-Compose is running
-- [ ] Step 2
-- [ ] Step 3
-- [ ] Step 4
-- [ ] Step 5
-- [ ] Step 6
-- [ ] Step 7
+- [ ] Step 2 - Chrome Network Tools
+- [ ] Step 3 - Examining PHP Proxy and Getting API Key
+- [ ] Step 4 - Instantiating an XMLHttpRequest Object
+- [ ] Step 5 - Opening and Sending a Request
+- [ ] Step 6 - Processing Response Data
+- [ ] Step 7 - Adding Response Data to the Page
 
 ## Instructions
 In this Exercise, we will learn how to open files from a web server. we will also learn how to retrieve dynamic data from the server to update the client application. We will make use of AJAX to accomplish this.
@@ -37,7 +37,7 @@ In this Exercise, we will learn how to open files from a web server. we will als
     
     C.	We will employ AJAX to retrieve current data from the server so that we can use it to populate the web page.
 
-# Get Docker-Compose is running – Step 1
+# Get Docker-Compose is running
 
 1.	Getting up and running with LAMP via DOCKER.
     - Once upon a time we used to need install and run a bunch of stuff and things to get this running like WAMP and XAMPP, etc. But we got **docker** now ! So lets go into the exercise folder and get started.
@@ -52,14 +52,14 @@ In this Exercise, we will learn how to open files from a web server. we will als
 2.  Open [solar.html](http://localhost:8000/solar.html)
 
  
-# Chrome Network Tools – Step 2
+# Chrome Network Tools
 
 1. Open the **Developer Tools** and go to the [Network tab](https://developers.google.com/web/tools/chrome-devtools/network/). This tab shows details about each HTTP request and response related to the current page. Refresh the page if necessary, the request only registers when the tools are open, so it might start off empty. In Chrome, hit **F5** for a list of the messages.
 2. Find the **solar.html** message and click it. the summary of the messages is replaced with the detail of the clicked message.
 3.	Examine the detail of the message. You can see **General** details of the message. This is followed by both **Response** and **Request Headers**. Examine the Request Headers information in detail.
 
  
-# Step 3
+# Examining PHP Proxy and Getting API Key
    
 1.	We are going to use a server based PHP file as a proxy for our AJAX response. On the client side, open `solar.php` in your IDE. Let’s examine the contents.
 
@@ -82,7 +82,7 @@ In this Exercise, we will learn how to open files from a web server. we will als
 
 3.	Make a copy of the key and go back to `solar.php` . Paste the key over the text apikey in the URL string. Save the file and move a copy over to your web domain.
  
-#  Step 4
+#  Step 1 - Instantiating an XMLHttpRequest Object
    
 
 1.	Open the script.js file in the IDE. We will first add a httpRequest variable to the global variables. It will be used to track whether or not we have an existing request open. This will facilitate reusing the XHR object to optimize page loading:
@@ -120,7 +120,7 @@ Let’s move that code to the server and give it a browser test. We should get a
     ```
 Let’s give this a browser test for both syntax and to see if any errors are thrown.
  
-# Step 5
+# Step 2 - Opening and Sending a Request
 
 1.	
     Open the **script.js** file in the IDE. We now need to target the server resource and send a request. We will add this code to the bottom of the getWeather() function. We will first abort() any outstanding requests, we will then construct our URL string in the open() method, and we will finally send() our request with no body: 
@@ -138,7 +138,7 @@ Let’s give this a browser test for both syntax and to see if any errors are th
 3.	
     Switch to the Console tab. Type in httpRequest.responseText and press Enter. Chrome has good auto-complete for this. You should see a long string of data. This is your response from the web service. We will have to learn how to process that next.
  
-# Step 6
+# Step 3 - Processing Response Data
    
 1.	Open the script.js file in the IDE. We now need to Process the response data. To do this we will build a new function directly below the `getWeather()` function: 
 
@@ -172,7 +172,7 @@ Let’s move this over to the web server domain.
  
 
 
-# Step 7
+# Step 4 - Adding Response Data to the Page
    
 1.	
     Open the script.js file in the IDE. We now need to get the processed data onto the page. To do this we will build out some code that uses DOM access to fill in the data to the HTML elements. In the **fillWeather()** function, at the bottom of the if statement, let’s first build some variables to support this task: 
