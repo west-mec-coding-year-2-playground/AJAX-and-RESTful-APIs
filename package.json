@@ -1,0 +1,21 @@
+{
+  "name": "AJAX-and-RESTful-APIs",
+  "version": "1.0.0",
+  "description": "## Objectives - [ ] Complete Sub-Unit 1 - HTTP & The Web - [ ] Complete Sub-Unit 2 - AJAX - [ ] Complete Sub-Unit 3 - REST & API's",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "git": "git status && git add -A && git commit -m \"changed these files\" && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/west-mec-coding-year-2-playground/AJAX-and-RESTful-APIs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/west-mec-coding-year-2-playground/AJAX-and-RESTful-APIs/issues"
+  },
+  "homepage": "https://github.com/west-mec-coding-year-2-playground/AJAX-and-RESTful-APIs#readme"
+}

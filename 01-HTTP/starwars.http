@@ -1,0 +1,23 @@
+
+#### List of start wars planets
+GET https://swapi.co/api/planets/ HTTP/1.1
+
+### Get Luke Skywalker
+# @name lukeRequest
+GET https://swapi.co/api/people/?search=Luke HTTP/1.1
+
+### Get Luke Skywalker home planet
+GET {{lukeRequest.response.body.results[0].homeworld}} HTTP/1.1
+
+### List available resources
+GET https://swapi.co/api/ HTTP/1.1
+
+### Search planet with a specific name 
+@planetName = Naboo
+GET https://swapi.co/api/planets/?search={{planetName}} HTTP/1.1
+
+### Search planet with a specific name in wookie encoding
+GET https://swapi.co/api/planets/?search={{planetName}}&format=wookiee HTTP/1.1
+
+### List starships
+GET https://swapi.co/api/starships HTTP/1.1
