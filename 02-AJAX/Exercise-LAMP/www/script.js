@@ -10,6 +10,7 @@
 "use strict";
 
 // global variables
+<<<<<<< Updated upstream
 let selectedCity = "Tucson, AZ";
 let weatherReport;
 
@@ -23,6 +24,14 @@ function getRequestObject() {
       document.querySelector("p.error").getElementsByClassName.display = "block";
       return false;
    }
+=======
+var selectedCity = "Tucson, AZ";
+var weatherReport;
+var httpRequest = false;
+
+function getRequestObject() {
+   alert("getRequestObject()");
+>>>>>>> Stashed changes
 }
 
 function getWeather(evt) {
