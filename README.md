@@ -74,20 +74,27 @@ What students should know by now...
 1. Are you in the right directory?
    
    READ the ERROR !
+   
    <img width="538" alt="Screen Shot 2019-09-15 at 10 46 26 AM" src="https://user-images.githubusercontent.com/52793815/64925492-c4729300-d7e0-11e9-93b9-b6ef0f8e30ad.png">
+   
    This means there is not a `docker-compose.yml` file and the `docker-compose up` command will not run. You must cd into the correct directory. 
    
    Example: `cd /02-AJAX/Exercise-LAMP/` .
    
 2. Variables not defined.
+
    <img width="675" alt="Screen Shot 2019-09-15 at 10 45 07 AM" src="https://user-images.githubusercontent.com/52793815/64925482-98571200-d7e0-11e9-85a6-dd7ebf7337f0.png">
+   
    This means you probably dont have a `.env` file which defines the variables for the ports in `docker-compose.yml`. You need to rename `sample.env` to `.env` and preferably change the variables for users and passwords because its a security risk...
 
 3. Port already in use.
+
     <img width="576" alt="Screen Shot 2019-09-15 at 10 35 45 AM" src="https://user-images.githubusercontent.com/52793815/64925388-5aa5b980-d7df-11e9-838b-ce34f99bc199.png">
+    
    Going back to the READ, proceedure. This often happens because is already in use. It could also happen the previous class doesn't close docker in which may require a computer reset...
    
    You should check if docker containers are running and which ports with the command `docker ps`.
+   
    <img width="1170" alt="Screen Shot 2019-09-15 at 10 42 01 AM" src="https://user-images.githubusercontent.com/52793815/64925445-25e63200-d7e0-11e9-97b1-0d32c5c6b3cc.png">
 
    IF the port is in use from docker and not something else you can solve this by running `docker stop $(docker ps -aq)` which will stop all running docker containers.
