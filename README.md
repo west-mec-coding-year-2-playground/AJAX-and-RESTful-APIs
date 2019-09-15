@@ -10,7 +10,7 @@ What students should know by now...
 1. How to read markdown files like this.
 2. How to `cd` into the proper directories...
 3. How to create and run npm scripts.
-4. How to fork this repo, clone it and pull it for update.
+4. How to fork this repo, clone it, watch this repo, pull from it for updates and handle merge conflicts by applying what they learned last year...
 5. How to READ, SEARCH, ASK, etc ...
 
 ## Directory Tree
@@ -92,10 +92,8 @@ What students should know by now...
 
    IF the port is in use from docker and not something else you can solve this by running `docker stop $(docker ps -aq)` which will stop all running docker containers.
 
-4. 
-
-
-
-
-
 ## How to use
+1. Follow directions in class.
+2. Come to class early if you need a head start.
+3. Work during break if you need to catch up.
+4. Ask your peers for help then ask the instructor if it is a new or more serious issue.
