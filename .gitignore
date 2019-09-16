@@ -18,12 +18,31 @@ PowerPoint/
 Icon
 */Icon
 
+# SQL Stuff
+mysql/*.CSV
+*/mysql/mysql/.pem
+*/mysql/mysql/.cnf
+*/mysql/mysql/.frm
+*/mysql/mysql/.opt
+*/mysql/mysql/.ibd
+*/mysql/mysql/.MYD
+*/mysql/mysql/.MYI
+
 # Docker Stuff
+*.TRN
+*.pem
+*.cnf
+*.frm
+*.opt
+*.ibd
+*.MYD
+*.MYI
+
 composer.phar
 /vendor/
 */Exercise-LAMP/data/
 */Exercise-LAMP/ssl/
-
+*/02-AJAX/data/*
 # Logs
 logs
 *.log
