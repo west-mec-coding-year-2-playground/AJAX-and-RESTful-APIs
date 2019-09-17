@@ -67,8 +67,7 @@ function fillWeather() {
       Date(weatherReport.daily.data[0].time);
       var dayOfWeek = dateValue.getDay();
       var rows = document.querySelectorAll("section.week table tbody tr");
-      document.querySelector("section.week table caption").
-      innerHTML = selectedCity;
+      document.querySelector("section.week table caption").innerHTML = selectedCity;
    }
    document.querySelector("section.week table caption").style.display = "block";
    document.querySelector("section.week table").style.display = "inline-block";
