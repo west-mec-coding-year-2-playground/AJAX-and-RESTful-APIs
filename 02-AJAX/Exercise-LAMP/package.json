@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "docker-composer",
+    "start": "docker-composer up",
     "stop": "docker stop $(docker ps -aq)"
   },
   "keywords": [],
