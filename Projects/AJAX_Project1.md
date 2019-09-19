@@ -80,9 +80,8 @@ function getQuote() {
 }
 ```
 
-8.	To test this, let’s first call the function at the bottom of our stopSubmission
+8.	To test this, let’s first call the function at the bottom of our `stopSubmission()` function:
 ```js
-() function:
     getQuote();
 ```
 9.	Let’s also modify our load event to use it as an event handler instead of `getRequestObject()`:

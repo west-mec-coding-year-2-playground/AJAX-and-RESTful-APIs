@@ -158,8 +158,7 @@ Let’s give this a browser test for both syntax and to see if any errors are th
 2.	Now let’s build out the function, looking for a **readyState of 4** indicating data is loaded and a **status of 200**, indicating request was successful. **Both must be true to process the data**. We will then convert the JSON data to a JavaScript object:
 
     ```js
-       if (httpRequest.readyState === 4 &&
-            httpRequest.status === 200) {
+       if (httpRequest.readyState === 4 && httpRequest.status === 200) {
            weatherReport = JSON.parse(httpRequest.responseText);
        }
        
@@ -186,16 +185,12 @@ Let’s move this over to the web server domain.
     Open the script.js file in the IDE. We now need to get the processed data onto the page. To do this we will build out some code that uses DOM access to fill in the data to the HTML elements. In the **fillWeather()** function, at the bottom of the if statement, let’s first build some variables to support this task: 
 
    ```js
-      if (httpRequest.readyState === 4 
-        && httpRequest.status === 200) {
+      if (httpRequest.readyState === 4 && httpRequest.status === 200) {
         weatherReport = JSON.parse(httpRequest.responseText);
-        var days = ["Sunday","Monday","Tuesday",
-            "Wednesday","Thursday","Friday","Saturday"];
-        var dateValue = new 
-            Date(weatherReport.daily.data[0].time);
+        var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        var dateValue = new Date(weatherReport.daily.data[0].time);
         var dayOfWeek = dateValue.getDay();
-        var rows = document.querySelectorAll
-            ("section.week table tbody tr");
+        var rows = document.querySelectorAll("section.week table tbody tr");
         document.querySelector("section.week table caption").
             innerHTML = selectedCity;
       }
@@ -203,13 +198,12 @@ Let’s move this over to the web server domain.
 
    Move this over to the domain, run solar.html, and check the Console for syntax or other errors.
  
-1. Ok now for some pretty detailed code to populate that document. Let’s take it in small enough bites so that we do not get into trouble. First, let’s see if we can get the table to display and test our above code:
+1. Ok now for some pretty detailed code to populate that document. Let’s take it in small enough bites so that we do not get into trouble. First, let’s see if we can get the table to display by adding the following code inside `if (httpRequest.readyState === 4 && httpRequest.status === 200) {...}` and test our above code:
    ```js
-        document.querySelector("section.week table 
-            caption").style.display = "block";
-        document.querySelector("section.week 
-            table").style.display = "inline-block";
+        document.querySelector("section.week table caption").style.display = "block";
+        document.querySelector("section.week table").style.display = "inline-block";
    ```
+    <img width="1101" alt="Screen Shot 2019-09-16 at 9 36 25 PM" src="https://user-images.githubusercontent.com/52793815/65011933-eb29ea00-d904-11e9-9c3e-8a385c561e86.png">
 
     Let’s test that on the server. We should get our selected city showing and 7 days of sun symbols that come from our HTML file.
 
@@ -291,8 +285,7 @@ Let’s move this over to the web server domain.
     In your browser, open developer.forecast.io. Go to the bottom and click the Terms of Service link. Under Attribution, you will see that there are some things that you must do to legally display data gotten from this service. This is an **Intellectual Property prerogative**. You must display a message and open a link to the site from your app. Let’s open **solar.html** and prep it for this task. After the closing `</table>` tag, enter the following code:
 
     ```html
-           <p class="credit">Powered by <a 
-                 href="http://forecast.io">forecast</a></p>
+        <p class="credit">Powered by <a href="http://forecast.io">forecast</a></p>
     ```
     Save that and copy it to your web domain.
 
