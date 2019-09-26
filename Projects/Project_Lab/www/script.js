@@ -39,24 +39,9 @@ function getQuote() {
 }
 
 function displayData() {
-    if (httpRequest.status === 200) {
+    if (httpRequest.readyState === 4 && httpRequest.status === 200) {
         var stockResults = httpRequest.responseText;
-        var stockItems = JSON.parse(stockResults);
-
-        for (var i = stockItems.length - 1; i >= 0; i--) {
-            if (stockItems[i] === "") {
-                stockItems.splice(i, 1);
-            }
-        }
-        document.getElementById("ticker").innerHTML = stockItems[0];
-        document.getElementById("ticker").innerHTML = stockItems.symbol;
-        document.getElementById("openingPrice").innerHTML = stockItems.open;
-        document.getElementById("lastTrade").innerHTML = stockItems.latestPrice;
-        var date = new Date(stockItems.latestUpdate);
-        document.getElementById("lastTradeDT").innerHTML = date.toDateString() + "" + date.toLocaleTimeString();
-        document.getElementById("change").innerHTML = (stockItems.latestPrice - stockItems.open).toFixed(2);
-        document.getElementById("range").innerHTML = "Low " + (stockItems.low * 1).toFixed(2) + "High " + (stockItems.high * 1).toFixed(2);
-        document.getElementById("volume").innerHTML = (stockItems.latestVolume * 1).toLocaleString();
+        console.log(stockResults);
     }
 }
 
