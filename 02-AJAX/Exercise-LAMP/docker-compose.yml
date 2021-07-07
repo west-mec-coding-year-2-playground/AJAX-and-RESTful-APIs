@@ -15,8 +15,8 @@ services:
       #   published: 443
       #   protocol: tcp
       #   mode: host
-    links: 
-      - mysql
+    # links: 
+    #   - mysql
     volumes:
       - ./www:/var/www/html
       - ./config/apache2/custom.conf:/etc/apache2/mods-enabled/my.conf
